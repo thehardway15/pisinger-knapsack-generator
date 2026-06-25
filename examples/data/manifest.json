@@ -1,0 +1,71 @@
+{
+    "instances": [
+        {
+            "R": 1000,
+            "capacity": 254425,
+            "checksum": "sha256:4a0f1be5ed3c571b4ceb6cf246403c8b7f6b1ddab6f92c46ada4fb47e164bc0b",
+            "correlation_type": "strongly",
+            "instance_id": "n1000_strongly",
+            "metadata": {
+                "seed": 6
+            },
+            "n": 1000
+        },
+        {
+            "R": 1000,
+            "capacity": 246358,
+            "checksum": "sha256:b5ed8a74d56e6e688ab829299f1349c9692395139e68746350cbf0e878f5455c",
+            "correlation_type": "uncorrelated",
+            "instance_id": "n1000_uncorrelated",
+            "metadata": {
+                "seed": 4
+            },
+            "n": 1000
+        },
+        {
+            "R": 1000,
+            "capacity": 245436,
+            "checksum": "sha256:ffcd7c50288a87b7d6cc3f6d59202c0b71b00d7948dc11b08bfeae88c9dee0f6",
+            "correlation_type": "weakly",
+            "instance_id": "n1000_weakly",
+            "metadata": {
+                "seed": 5
+            },
+            "n": 1000
+        },
+        {
+            "R": 1000,
+            "capacity": 3877,
+            "checksum": "sha256:c83e48a481d525ee258c4b8dfac3cdc9a0eba13630018b549d17f5e233215e5c",
+            "correlation_type": "strongly",
+            "instance_id": "n20_strongly",
+            "metadata": {
+                "seed": 3
+            },
+            "n": 20
+        },
+        {
+            "R": 1000,
+            "capacity": 5084,
+            "checksum": "sha256:149bf8ff040aeebfa89e6811d23cb1f2edcdcda80c9714b14b087522d6dba719",
+            "correlation_type": "uncorrelated",
+            "instance_id": "n20_uncorrelated",
+            "metadata": {
+                "seed": 1
+            },
+            "n": 20
+        },
+        {
+            "R": 1000,
+            "capacity": 4786,
+            "checksum": "sha256:e6eab5452db0cec3ca56be95a2e0bdf996cb2383a8339376499b53f49f40c74a",
+            "correlation_type": "weakly",
+            "instance_id": "n20_weakly",
+            "metadata": {
+                "seed": 2
+            },
+            "n": 20
+        }
+    ],
+    "schema_version": 1
+}

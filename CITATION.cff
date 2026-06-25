@@ -1,0 +1,37 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "pisinger-knapsack"
+abstract: >-
+  A deterministic generator of 0/1 knapsack problem instances based on
+  Pisinger's scheme, with three value-weight correlation classes, explicit
+  seeding, canonical JSON output and a dataset manifest with checksums.
+type: software
+authors:
+  - family-names: "Wiśniewski"
+    given-names: "Damian"
+    email: "dev@thehardway.pl"
+version: "0.2.0"
+date-released: "2026-06-25"
+license: MIT
+repository-code: "https://github.com/thehardway15/pisinger-knapsack-generator"
+url: "https://github.com/thehardway15/pisinger-knapsack-generator"
+keywords:
+  - knapsack
+  - pisinger
+  - instance-generator
+  - combinatorial-optimization
+  - benchmark
+  - reproducibility
+references:
+  - type: article
+    authors:
+      - family-names: "Pisinger"
+        given-names: "David"
+    title: "Where are the hard knapsack problems?"
+    journal: "Computers & Operations Research"
+    volume: 32
+    issue: 9
+    start: 2271
+    end: 2284
+    year: 2005
+    doi: "10.1016/j.cor.2004.03.002"

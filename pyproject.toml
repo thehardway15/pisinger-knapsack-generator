@@ -1,0 +1,94 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pisinger-knapsack"
+dynamic = ["version"]
+description = "Deterministic 0/1 knapsack problem instance generator based on Pisinger's scheme."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Damian Wiśniewski", email = "dev@thehardway.pl" }]
+keywords = [
+    "knapsack",
+    "pisinger",
+    "instance-generator",
+    "combinatorial-optimization",
+    "benchmark",
+    "operations-research",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+    "Typing :: Typed",
+]
+dependencies = ["numpy>=2.0,<3"]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.9",
+    "mypy>=1.13",
+]
+
+[project.scripts]
+pisinger-knapsack = "pisinger_knapsack.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/thehardway15/pisinger-knapsack-generator"
+Repository = "https://github.com/thehardway15/pisinger-knapsack-generator"
+Issues = "https://github.com/thehardway15/pisinger-knapsack-generator/issues"
+Changelog = "https://github.com/thehardway15/pisinger-knapsack-generator/blob/main/CHANGELOG.md"
+
+[tool.hatch.version]
+path = "src/pisinger_knapsack/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/pisinger_knapsack"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # isort
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "SIM", # flake8-simplify
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["pisinger_knapsack"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra --strict-markers --strict-config"
+
+[tool.coverage.run]
+source = ["pisinger_knapsack"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["src", "tests"]
