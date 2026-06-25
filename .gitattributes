@@ -1,0 +1,7 @@
+# Normalize line endings to LF in the repository and on checkout, on every
+# platform. The generator always writes LF, and instance/manifest checksums are
+# computed over exact bytes, so endings must never vary by operating system.
+* text=auto eol=lf
+
+# Byte-exact data artifacts: never apply any end-of-line conversion.
+examples/data/** -text
