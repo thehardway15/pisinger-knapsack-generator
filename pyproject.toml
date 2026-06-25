@@ -56,6 +56,27 @@ path = "src/pisinger_knapsack/__init__.py"
 [tool.hatch.build.targets.wheel]
 packages = ["src/pisinger_knapsack"]
 
+# Explicit allow-list for the source distribution. Hatchling builds the sdist
+# from the working tree, so untracked local files would otherwise leak into the
+# archive. Whitelisting guarantees the sdist contains only intended files,
+# regardless of the working-tree state.
+[tool.hatch.build.targets.sdist]
+# Patterns are anchored to the project root with a leading slash; without it
+# hatchling matches by basename at any depth (e.g. a bare "README.md" would also
+# pull in any nested README.md).
+include = [
+    "/src",
+    "/tests",
+    "/examples",
+    "/README.md",
+    "/CHANGELOG.md",
+    "/CONTRIBUTING.md",
+    "/CITATION.cff",
+    "/references.bib",
+    "/LICENSE",
+    "/pyproject.toml",
+]
+
 [tool.ruff]
 line-length = 100
 target-version = "py310"
